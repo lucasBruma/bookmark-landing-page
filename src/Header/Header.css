@@ -1,0 +1,14 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 3rem;
+}
+
+.menu-container{
+    display: none;
+    justify-content: space-around;
+}
+
+.hamburguer-menu-button{
+    
+}
