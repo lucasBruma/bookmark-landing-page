@@ -1,9 +1,5 @@
 .logo-container{
     position: relative;
-    z-index: 5;
+    z-index: 15;
 }
 
-.logo-container--white img{
-    stroke: black;
-    fill: white;
-}

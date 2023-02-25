@@ -1,0 +1,29 @@
+
+.illustration-container{
+    display: flex;
+    position: relative;
+    width: 100%;
+    margin-bottom: 2.5rem;
+}
+
+.left{
+
+}
+
+.right{
+    justify-content: flex-end;
+}
+
+.illustration-hero{
+    position: absolute;
+    left: 5%;
+    top: -37px;
+    max-width: 332px;
+    max-height: 250px;
+    z-index: 9;
+}
+
+.illustration-hero--composed{
+    left: 16%;
+    top: -36px;
+}

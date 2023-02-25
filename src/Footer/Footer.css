@@ -1,0 +1,16 @@
+@import '../variables.css';
+
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--neutral-dark-blue);
+    padding: 2rem 5rem;
+    color: #fff;
+    height: 269px;
+}
+
+footer img{
+    width: 160px;
+}

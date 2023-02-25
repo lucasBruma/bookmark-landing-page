@@ -1,0 +1,39 @@
+.intro__buttons{
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    padding: 1rem 2rem;
+}
+
+.features__buttons{
+    display: flex;
+    flex-direction: column;
+    padding: 0 2rem;
+    height: 150px;
+}
+
+.features__components{
+    margin-top: 7rem;
+}
+
+.cards-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+}
+
+.faqs-container{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 8rem;
+}
+
+.faqs{
+    margin-bottom: 2.2rem;
+}
+
+.footer__icons{
+    display: flex;
+    gap: 2rem;
+}

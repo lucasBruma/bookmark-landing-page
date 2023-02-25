@@ -4,10 +4,10 @@ import { Button } from '../Button';
 function Menu() {
     return (
         <>
-            <Button section="features">FEATURES</Button>
-            <Button section="pricing">PRICING</Button> 
-            <Button section="contact">CONTACT</Button> 
-            <Button section="login">LOGIN</Button>  
+            <Button bg="transparent" type="menu">FEATURES</Button>
+            <Button bg="transparent" type="menu">PRICING</Button> 
+            <Button bg="transparent" type="menu">CONTACT</Button> 
+            <Button bg="red" type="box">LOGIN</Button>  
         </>
     );
 }

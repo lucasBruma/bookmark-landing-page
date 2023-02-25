@@ -1,0 +1,13 @@
+@import "../variables.css";
+
+.rounded-blue-background{
+    background-color: var(--primary-soft-blue);
+    width: 80%;
+    height: 198px;
+    border-bottom-left-radius: 40%;
+    border-top-left-radius: 141%;
+}
+
+.left .rounded-blue-background{
+    transform: scaleX(-1);
+}

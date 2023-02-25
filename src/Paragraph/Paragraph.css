@@ -1,0 +1,8 @@
+@import '../variables.css';
+
+.paragraph{
+    color: var(--neutral-blue);
+    padding: 0 1.5rem 1.5rem 1.5rem;
+    text-align: center;
+    line-height: 1.6rem;
+}

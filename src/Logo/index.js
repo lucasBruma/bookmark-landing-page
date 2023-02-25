@@ -3,8 +3,10 @@ import "./Logo.css"
 
 function Logo({showModal}) {
     return (
-        <div className={`logo-container ${showModal && 'logo-container--white'}`} >
-           <img src='/images/logo-bookmark.svg'></img>
+        <div className='logo-container'>
+            {!showModal ? 
+            <img src='/images/logo-bookmark.svg'></img>
+            :<img src='/images/logo-bookmark-modal.svg'></img>} 
         </div>
     );
 }

@@ -1,0 +1,112 @@
+@import '../variables.css';
+
+.button{
+    font-weight: 500;
+}
+
+.button--transparent{
+    background: none;
+    border: none;
+    outline: none;
+}
+
+.button--red{
+    background-color: var(--primary-soft-red);
+    color: #fff;
+}
+
+.button--blue{
+    background-color: var(--primary-soft-blue);
+    color: #fff;
+}
+
+.button--white{
+    background-color: #fdf6f6;
+}
+
+/*MODAL MENU BUTTONS*/
+
+.button--modal{
+    color: #fff;
+    border-top: 1px solid var(--neutral-blue);
+    flex-grow:1;
+    font-size: 17px;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+.button--modal:nth-child(3){
+    border-bottom: 1px solid var(--neutral-blue);
+}
+
+.button--modal:last-child{
+    position: absolute;
+    top: 30px;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    height: 50px;
+    width: 100%;
+    top: 110%;
+}
+
+/*BUTTONS BOX TYPE*/
+
+.button--box{
+    padding: 1rem;
+    border: 0;
+    border-radius: 8px;
+    box-shadow: 0px 10px 19px -6px rgba(0,0,0,0.28);
+    flex-grow: 1;
+}
+
+/*BUTTONS FEATURES*/
+
+.button--feature{
+    border-top: 1px solid var(--neutral-blue);
+    flex-grow: 1;
+    color: var(--neutral-blue);
+    font-weight: 400;
+}
+
+.button--feature--selected{
+    color: black;
+    position: relative;
+}
+
+.button--feature--selected::after{
+    content: '';
+    display: block;
+    width: 30vw;
+    height: 4px;
+    background-color: var(--primary-soft-red);
+    margin: 0 auto;
+    margin-top: 2px;
+    position: absolute;
+    top: 44px;
+    left: 32%;
+}
+
+.button--feature:last-child{
+    border-bottom: 1px solid var(--neutral-blue);
+}
+
+/*faqs*/
+
+.faqs-container .button--box{
+    margin: 0 auto;
+    padding: 1rem 1.7rem;
+}
+
+/*form*/
+
+.form .button--box{
+    padding: 1rem 2rem;
+}
+
+/*footer*/
+
+.button--footer{
+    color: #fff;
+    font-weight: 100;
+    letter-spacing: 1px;
+}

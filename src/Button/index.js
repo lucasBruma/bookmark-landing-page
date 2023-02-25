@@ -1,8 +1,10 @@
-import React, { Children } from 'react';
+import React from 'react';
+import './Button.css'
 
-function Button({children, section}) {
+function Button({children, bg, type}) {
+
     return (
-        <button id={section}>
+        <button className={`button button--${type} button--${bg}`}>
             {children}
         </button>
     );
