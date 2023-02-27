@@ -3,7 +3,7 @@ import './DownloadExtension.css';
 
 function DownloadExtension({children}) {
     return (
-        <div className='download-container'>
+        <div className='download-container' id='pricing'>
             {children}
         </div>
     );

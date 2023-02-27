@@ -27,3 +27,19 @@
     display: flex;
     padding: 0 1.5rem;
 }
+
+@media (min-width:700px) {
+    .card{
+        width: 20%;
+    }
+
+    .card:first-child{
+        position: relative;
+        top: -2rem;
+    }
+
+    .card:last-child{
+        position: relative;
+        top: 2rem;
+    }
+}

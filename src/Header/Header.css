@@ -2,6 +2,7 @@ header{
     display: flex;
     justify-content: space-between;
     padding: 2.4rem;
+    align-items: center;
 }
 
 .menu-container{
@@ -9,6 +10,8 @@ header{
     justify-content: space-around;
 }
 
-.hamburguer-menu-button{
-    
+@media (min-width:700px) {
+    header{
+        padding: 2.4rem 8rem;
+    }
 }

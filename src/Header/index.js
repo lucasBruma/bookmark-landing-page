@@ -4,27 +4,14 @@ import {Logo} from '../Logo';
 import {ToggleMenuButton} from '../ToggleMenuButton';
 import {Menu} from '../Menu'
 
-function Header() {
-    const initialState = window.innerWidth < 768 ? false : true;
-    const [showMenu, setShowMenu] = React.useState(initialState);
-    const [showModal, setShowModal] = React.useState(false);
+function Header({showModal, setShowModal, showMenu, setShowMenu}) {
 
-    React.useEffect(() => {
-        function handleResize() {
-        if (window.innerWidth < 768) {
-            setShowMenu(false);
-        } else {
-            setShowMenu(true);
-        }
-        }
-        window.addEventListener('resize', handleResize);
-        return () => window.removeEventListener('resize', handleResize);
-    }, []);
 
     return (
         <header>
-            <Logo showModal={showModal}/>
-            {showMenu ? <Menu/> : <ToggleMenuButton showModal={showModal} setShowModal={setShowModal}/>}
+            <Logo src='/images/logo-bookmark.svg'/>
+            {showMenu ? <Menu/> : 
+            <ToggleMenuButton showModal={showModal} setShowModal={setShowModal} src='/images/icon-hamburger.svg'></ToggleMenuButton>}
         </header>
     );
 }

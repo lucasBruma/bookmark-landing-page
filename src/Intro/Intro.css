@@ -6,3 +6,9 @@
     justify-content: flex-end;
     padding-top: 52px;
 }
+
+@media (min-width:700px) {
+    .intro{
+        flex-direction: row-reverse;
+    }
+}

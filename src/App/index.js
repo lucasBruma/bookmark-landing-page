@@ -16,11 +16,14 @@ import { Faq } from '../Faq';
 import { Form } from '../Form';
 import {Footer} from '../Footer';
 import { Icon } from '../Icon';
+import { MenuButton } from '../MenuButton';
+import {Modal} from '../Modal';
 
 const cards = [{browser:'chrome',version:'62'},{browser:'firefox',version:'55'},{browser:'opera',version:'46'}]
 
 function App() {
-  const [featureSelected, setFeatureSelected] = React.useState('bookmarking');
+
+  const [showModal, setShowModal] = React.useState(false);
   const [faqs, setFaqs] = React.useState([
     {
       question: 'What is Bookmark?',
@@ -48,9 +51,27 @@ function App() {
     }
   ]);
 
+  const initialState = window.innerWidth < 768 ? false : true;
+  const [showMenu, setShowMenu] = React.useState(initialState);
+  const [featuresBtn, setFeaturesBtn] = React.useState(initialState);
+
+  React.useEffect(() => {
+      function handleResize() {
+      if (window.innerWidth < 768) {
+          setShowMenu(false);
+          setFeaturesBtn(false);
+      } else {
+          setShowMenu(true);
+          setFeaturesBtn(true);
+      }
+      }
+      window.addEventListener('resize', handleResize);
+      return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   return (
     <>
-      <Header/>
+      <Header showModal={showModal} setShowModal={setShowModal} showMenu={showMenu} setShowMenu={setShowMenu}/>
       <Intro>
         <IllustrationWithBg img='illustration-hero.svg' direction='right' type='intro'/>
         <div className='intro__content'>
@@ -65,43 +86,7 @@ function App() {
           </div>
         </div>
       </Intro>
-      <Features>
-        <div className='features__content'>
-          <Title size="medium">Features</Title>
-          <Paragraph>
-            Our aim is to make it quick and easy for you to access your favourite websites. 
-            Your bookmarks sync between your devices so you can access them on the go.
-          </Paragraph>
-        </div>
-        <div className='features__buttons'>
-          <FeatureButton bg="transparent" type="feature" setFeatureSelected={setFeatureSelected} feature="bookmarking" isSelected={featureSelected === 'bookmarking'}>Simple Bookmarking</FeatureButton>
-          <FeatureButton bg="transparent" type="feature" setFeatureSelected={setFeatureSelected} feature="searching" isSelected={featureSelected === 'searching'}>Speedy Searching</FeatureButton> 
-          <FeatureButton bg="transparent" type="feature" setFeatureSelected={setFeatureSelected} feature="sharing" isSelected={featureSelected === 'sharing'}>Easy Sharing</FeatureButton> 
-        </div>
-        <div className='features__components'>
-          <FeatureComponent feature="bookmarking" featureSelected={featureSelected}>
-            <IllustrationWithBg img='illustration-features-tab-1.svg' direction='left'/>
-            <Title size="medium">Bookmark in one click</Title>
-            <Paragraph>Organize your bookmarks however you like. Our simple drag-and-drop interface 
-              gives you complete control over how you manage your favourite sites.
-            </Paragraph>
-          </FeatureComponent>
-          <FeatureComponent feature="searching" featureSelected={featureSelected}>
-            <IllustrationWithBg img='illustration-features-tab-2.svg' direction='left' type='composed'/>
-            <Title size="medium">Intelligent search</Title>
-            <Paragraph>Our powerful search feature will help you find saved sites in no time at all. 
-              No need to trawl through all of your bookmarks.
-            </Paragraph>
-          </FeatureComponent>
-          <FeatureComponent feature="sharing" featureSelected={featureSelected}>
-            <IllustrationWithBg img='illustration-features-tab-3.svg' direction='left' type='composed'/>
-            <Title size="medium">Share your bookmarks</Title>
-            <Paragraph>Easily share your bookmarks and collections with others. Create a shareable 
-              link that you can send at the click of a button.
-            </Paragraph>
-          </FeatureComponent>
-        </div>
-      </Features>
+      <Features featuresBtn={featuresBtn} setFeaturesBtn={setFeaturesBtn} />
       <DownloadExtension>
         <Title size="medium">Download the extension</Title>
         <Paragraph>We’ve got more browsers in the pipeline. Please do let us know if you’ve 
@@ -129,15 +114,18 @@ function App() {
       </div>
       <Form/>
       <Footer>
-          <img src='/images/logo-bookmark-footer.svg'></img>
-          <Button bg='transparent' type='footer'>FEATURES</Button>
-          <Button bg='transparent' type='footer'>PRICING</Button>
-          <Button bg='transparent' type='footer'>CONTACT</Button>
+          <div className='footer__sections'>
+            <img src='/images/logo-bookmark-footer.svg'></img>
+            <MenuButton bg='transparent' type='footer'>FEATURES</MenuButton>
+            <MenuButton bg='transparent' type='footer'>PRICING</MenuButton>
+            <MenuButton bg='transparent' type='footer'>CONTACT</MenuButton>
+          </div>
           <div className='footer__icons'>
-            <Icon src='/images/icon-facebook.svg'></Icon>
-            <Icon src='/images/icon-twitter.svg'></Icon>
+            <a href='#'><Icon src='/images/icon-facebook.svg'></Icon></a>
+            <a href='#'><Icon src='/images/icon-twitter.svg'></Icon></a>
           </div>
       </Footer>
+      {showModal && <Modal showModal={showModal} setShowModal={setShowModal}/>}
     </>
   );
 }

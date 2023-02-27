@@ -1,0 +1,10 @@
+.feature__component--hidden {
+    display: none !important;
+}
+
+
+@media (min-width:700px) {
+    .feature__component{
+        display: flex;
+    }
+}

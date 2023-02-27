@@ -1,12 +1,39 @@
 @import '../variables.css';
 
+.form-container{
+    background-color: var(--primary-soft-blue);
+}
+
 .form{
     display: flex;
     flex-direction: column;
-    background-color: var(--primary-soft-blue);
     color: #fff;
     font-weight: 400;
     padding: 4rem 2rem;
+}
+
+.form__input{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.form__input i{
+    position: absolute;
+    top: 20%;
+    left: 90%;
+}
+
+.fa-circle-check{
+    color: var(--primary-soft-blue);
+}
+
+.fa-circle-exclamation{
+    color: var(--primary-soft-red)
+}
+
+.form__alert{
+    margin-block-start: 0;
 }
 
 input{
@@ -15,8 +42,47 @@ input{
     outline: 0;
     border-radius: 7px;
     margin: 1rem 0;
+    flex-grow: 1;
 }
 
 input::placeholder{
     color: hsl(229, 18%, 81%);
+}
+
+@media (min-width:700px) {
+    .features__buttons{
+        flex-direction: row;
+        max-width: 615px;
+        margin: 0 auto;
+        height: 70px;
+    }
+
+    .form-container{
+        height: 325px;
+    }
+
+    .form{
+        width: 33%;
+        margin: 0 auto;
+    }
+
+    .form__input{
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    input{
+        margin: 0;
+    }
+
+    .form__alert{
+        position: absolute;
+        top: 110%;
+    }
+
+    .form__input i{
+        position: absolute;
+        top: 32%;
+        left: 60%;
+    }
 }

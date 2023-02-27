@@ -1,8 +1,7 @@
 import React from 'react';
-import {Modal} from '../Modal';
 import './ToggleMenuButton.css'
 
-function ToggleMenuButton({showModal , setShowModal}) {
+function ToggleMenuButton({showModal , setShowModal, src}) {
 
     function toggleModal(){
         setShowModal(!showModal) 
@@ -11,10 +10,8 @@ function ToggleMenuButton({showModal , setShowModal}) {
     return (
         <>
             <button className='toggle-menu-button' onClick={toggleModal}>
-                {!showModal ? <img src='/images/icon-hamburger.svg'></img> : <img src='/images/icon-close.svg'></img>}
+                <img src={src}></img>
             </button>
-            
-            {showModal && <Modal/>}
         </>
 
     );

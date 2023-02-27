@@ -1,6 +1,4 @@
 .toggle-menu-button{
-    position: relative;
-    z-index: 15;
     background-color: transparent;
     border: none;
 }

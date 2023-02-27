@@ -1,4 +1,9 @@
 .icon{
     width: 22px;
     height: 22px;
+    transition: all .6s ease;
+}
+
+a:hover > .icon{
+    filter: invert(66%) sepia(44%) saturate(5911%) hue-rotate(325deg) brightness(97%) contrast(101%);
 }

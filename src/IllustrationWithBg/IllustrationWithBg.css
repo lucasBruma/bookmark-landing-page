@@ -27,3 +27,23 @@
     left: 16%;
     top: -36px;
 }
+
+@media (min-width: 700px) {
+    .illustration-container{
+        margin-top: 4rem;
+    }
+
+    .intro .illustration-container .illustration-hero{
+        left: 20%;
+        top: -106px;
+        max-width: 570px;
+        max-height: 375px;
+    }
+    .features__components .illustration-container .illustration-hero{
+        left: 19%;
+        top: -100px;
+        max-width: 500px;
+        max-height: 400px;
+    }
+}
+

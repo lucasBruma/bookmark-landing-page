@@ -11,3 +11,15 @@
 .left .rounded-blue-background{
     transform: scaleX(-1);
 }
+
+@media (min-width:700px) {
+    .rounded-blue-background{
+        width: 55%;
+        height: 295px;
+        border-bottom-left-radius: 95%;
+    }
+
+    .feature__component .rounded-blue-background{
+        width: 75%;
+    }
+}

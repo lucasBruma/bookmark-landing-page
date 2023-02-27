@@ -6,3 +6,33 @@
     text-align: center;
     line-height: 1.6rem;
 }
+
+@media (min-width:700px) {
+    .intro__content .paragraph{
+        text-align: left;
+        padding-left: 8rem;
+        padding-bottom: 0;
+    }
+
+    .features__content .paragraph{
+        max-width: 480px;
+        margin: 0 auto;
+    }
+
+    .feature__text .paragraph{
+        padding-left: 0;
+        padding-right: 6rem;
+        text-align: left;
+    }
+
+    .download-container .paragraph{
+        width: 470px;
+        margin: 0 auto;
+    }
+
+    
+    .card__content .paragraph{
+        width: auto;
+        margin-top: 1rem;
+    }
+}

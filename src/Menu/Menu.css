@@ -1,0 +1,5 @@
+.header__menu{
+    display: flex;
+    width: 375px;
+    gap: 20px;
+}

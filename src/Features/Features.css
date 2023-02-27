@@ -1,3 +1,35 @@
 .features{
     margin-top: 9rem;
 }
+
+.features__buttons{
+    display: flex;
+    flex-direction: column;
+    padding: 0 2rem;
+    height: 150px;
+}
+
+.features__components{
+    margin-top: 7rem;
+}
+
+
+@media (min-width:700px) {
+    .features__buttons{
+        flex-direction: row;
+        max-width: 615px;
+        margin: 0 auto;
+        height: 70px;
+    }
+
+    .feature__component .illustration-container{
+        flex-basis: 0;
+        flex-grow: 1;
+    } 
+
+    .feature__text{
+        padding-left: 10rem;
+        flex-basis: 0;
+        flex-grow: 1;
+    }
+}

@@ -6,11 +6,33 @@ footer{
     align-items: center;
     justify-content: space-between;
     background-color: var(--neutral-dark-blue);
-    padding: 2rem 5rem;
+    padding: 0rem 5rem 2rem;
     color: #fff;
     height: 269px;
 }
 
 footer img{
     width: 160px;
+}
+
+.footer__sections{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-evenly;
+}
+
+@media (min-width:700px) {
+    footer{
+        flex-direction: row;
+        height: auto;
+        padding-top: 2rem;
+    }
+
+    .footer__sections{ 
+        flex-direction: row;
+        justify-content: space-between;
+        flex-grow: unset;
+        width: 55%;
+    }
 }

@@ -1,19 +1,15 @@
+@import '../variables.css';
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
 .intro__buttons{
     display: flex;
     justify-content: center;
     gap: 16px;
     padding: 1rem 2rem;
-}
-
-.features__buttons{
-    display: flex;
-    flex-direction: column;
-    padding: 0 2rem;
-    height: 150px;
-}
-
-.features__components{
-    margin-top: 7rem;
 }
 
 .cards-container{
@@ -36,4 +32,17 @@
 .footer__icons{
     display: flex;
     gap: 2rem;
+}
+
+@media (min-width:700px) {
+    .cards-container{
+        flex-wrap: nowrap;
+        margin-top: 3rem;
+    }
+
+    .faqs-container{
+        width: 55%;
+        margin: 0 auto;
+        margin-bottom: 8rem;
+    }
 }
