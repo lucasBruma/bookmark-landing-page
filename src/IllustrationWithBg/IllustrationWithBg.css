@@ -28,7 +28,7 @@
     top: -36px;
 }
 
-@media (min-width: 700px) {
+@media (700px <= width <= 1400px ) {
     .illustration-container{
         margin-top: 4rem;
     }
@@ -47,3 +47,20 @@
     }
 }
 
+@media (width > 1400px ) {
+
+    .intro .illustration-container .illustration-hero{
+        left: 35%;
+        top: -70px;
+        max-width: 570px;
+        max-height: 375px;
+    }
+
+    .features__components .illustration-container .illustration-hero{
+        left: 25%;
+        top: -80px;
+        max-width: 500px;
+        max-height: 400px;
+    }
+
+}
